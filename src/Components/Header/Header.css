@@ -1,0 +1,234 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Sofia+Sans+Condensed:wght@500&display=swap");
+
+.headerParentDiv {
+  padding: 16px 10px;
+  /* background-color: rgb(81, 180, 180); */
+  background-color: #000;
+  position: sticky;
+  width: 100vw;
+  z-index: 999;
+  top: 0;
+}
+
+.loginLinkHeader {
+  color: white;
+  cursor: pointer;
+  transition: color 0.18s ease-in-out;
+}
+.loginLinkHeader:hover {
+  color: rgb(196, 196, 196);
+}
+
+.headerChildDiv {
+  width: 100%;
+  margin: auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.placeSearch {
+  width: 16em;
+  height: 42px;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  padding: 0 8px;
+  border-radius: 5px;
+  background-color: #373737;
+  border: 0.5px rgb(182, 182, 182) solid;
+}
+
+.placeSearch input {
+  border: none;
+  outline: none;
+  background: transparent;
+  color: white;
+  font-family: "Roboto", sans-serif;
+}
+
+.productSearch {
+  height: 42px;
+  background-color: #373737;
+  border-radius: 8px;
+  border: 0.5px rgb(182, 182, 182) solid;
+}
+
+.language {
+  height: 48px;
+  display: flex;
+  align-items: center;
+}
+
+.language span {
+  /* justify-content: space-between;
+  align-items: center; */
+  font-size: 15px;
+  white-space: normal;
+  text-overflow: ellipsis;
+  font-weight: bolder;
+  margin-right: 5px;
+}
+
+.span {
+  text-decoration: none;
+  font-size: 16px;
+  white-space: normal;
+  text-overflow: ellipsis;
+  font-weight: bolder;
+  margin-right: 5px;
+  cursor: pointer;
+}
+.loginPage {
+  color: white;
+  font-family: "Poppins", sans-serif;
+}
+.loginPage hr {
+  margin: 0;
+  background-color: white;
+  height: 2px;
+}
+
+.loginPage a {
+  text-decoration: none;
+}
+.logout-span {
+  cursor: pointer;
+  font-weight: 600;
+  transition: color 0.18s ease-in-out;
+  color: white;
+  font-family: "Poppins", sans-serif;
+}
+.logout-span:hover {
+  color: rgb(196, 196, 196);
+}
+
+.sellMenu {
+  position: relative;
+  cursor: pointer;
+}
+
+.sellMenu .all {
+  fill: white;
+}
+
+.sellMenu .top {
+  fill: #23e5db;
+}
+
+.sellMenu .left {
+  fill: #ffce32;
+}
+
+.sellMenu .right {
+  fill: #3a77ff;
+}
+.sellMenu .sellMenuContent {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 14px;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+  color: #002f34;
+}
+
+/* .sellMenu .sellMenuContent svg {
+  align-items: center;
+} */
+.sellMenu .sellMenuContent span {
+  margin-left: 5px;
+}
+
+@media only screen and (max-width: 700px) {
+  .placeSearch,
+  .productSearch {
+    display: none;
+  }
+}
+
+.dataResult-header {
+  position: absolute;
+  top: 60px;
+  padding: 0;
+  left: 208px;
+  width: 16em;
+  max-height: 208px;
+  border: none;
+  background-color: white;
+  box-shadow: rgb(0 0 0 / 35%) 0px 31px 20px;
+  overflow: hidden;
+  overflow-y: auto;
+  border-radius: 0 0 14px 14px;
+}
+
+.dataResult-header::-webkit-scrollbar {
+  width: 5px;
+  height: 8px;
+  border-radius: 14px;
+  background-color: rgb(220, 220, 220); /* or add it to the track */
+}
+.dataResult-header::-webkit-scrollbar-thumb {
+  border-radius: 14px;
+  background: rgb(148, 148, 148);
+}
+
+.dataResult-header .dataItem-header {
+  width: 100%;
+  cursor: pointer;
+
+  color: black;
+  font-size: smaller;
+}
+
+.dataItem-header p {
+  margin: 0;
+  padding: 16px;
+}
+
+.dataItem-header :hover {
+  background-color: #ebeeef;
+}
+.headerBtn {
+  width: 130px;
+  padding: 4px 8px;
+  border: none;
+  outline: none;
+  border-radius: 5px;
+  text-align: center;
+  font-size: 20px;
+  color: #fff;
+  cursor: pointer;
+  transition: all 0.5s;
+}
+.hover-btn {
+  background-color: #007b8c;
+}
+.hover-btn span {
+  position: relative;
+  display: inline-block;
+  cursor: pointer;
+  transition: 0.5s;
+  font-family: "Sofia Sans Condensed", sans-serif;
+}
+.hover-btn span::after {
+  position: absolute;
+  content: "→";
+  opacity: 0;
+  top: 0;
+  right: -25px;
+  transition: 0.5s;
+}
+.hover-btn:hover span {
+  padding-right: 25px;
+}
+.hover-btn:hover span::after {
+  opacity: 1;
+  right: 0;
+}

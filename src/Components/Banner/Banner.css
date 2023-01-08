@@ -1,0 +1,54 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap");
+.bannerParentDiv .bannerChildDiv .menuBar {
+  padding: 10px 16px;
+  background-color: #141414;
+  color: white;
+  position: sticky;
+
+  z-index: 998;
+  top: 80px;
+}
+
+.bannerCategory {
+  transition: color 0.2s ease-in-out;
+  font-family: "Montserrat", sans-serif;
+}
+.bannerCategory:hover {
+  color: rgb(200, 200, 200);
+}
+.bannerParentDiv .bannerChildDiv .menuBar .categoryMenu span {
+  margin-right: 16px;
+  font-weight: bolder;
+}
+
+.bannerParentDiv .bannerChildDiv .menuBar .otherQuickOptions span {
+  padding: 10px;
+}
+
+.bannerChildDiv .banner {
+  position: relative;
+  margin-top: 16px;
+  width: 100vw;
+}
+.bannerChildDiv .banner img {
+  width: 100vw;
+}
+
+@media only screen and (max-width: 700px) {
+  .otherQuickOptions {
+    display: none;
+  }
+  .bannerChildDiv .banner {
+    position: relative;
+  }
+}
+
+.otherQuickOptions span {
+  cursor: pointer;
+}
+.otherQuickOptions {
+  display: flex;
+  justify-content: space-around;
+  width: 60%;
+  margin: auto;
+}

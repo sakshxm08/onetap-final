@@ -1,0 +1,93 @@
+.search {
+  position: relative;
+}
+.searchInputs {
+  height: 42px;
+  display: flex;
+}
+
+.search input {
+  /* background-color: #ebeeef;
+    color: black;
+    border: 0;
+    border-radius: 2px;
+    border-top-right-radius: 0px;
+    border-bottom-right-radius: 0px;
+    font-size: 18px;
+    padding: 15px;
+    height: 60px;
+    width: 250px;
+    display: flex; */
+
+  width: 30em;
+  height: 42px;
+  border: none;
+  background: none;
+  padding-left: 16px;
+  color: white;
+  font-family: "Roboto", sans-serif;
+}
+
+.search .searchIcon {
+  margin: auto 10px;
+  padding-right: 8px;
+  /* background-color: #ebeeef;
+    display: flex; */
+  place-items: center;
+  color: black;
+}
+
+input:focus {
+  outline: none;
+}
+.searchIcon svg {
+  font-size: 35px;
+}
+
+.dataResult {
+  position: absolute;
+  top: 40px;
+  padding: 0;
+  width: 33.33em;
+  max-height: 208px;
+  border: none;
+  background-color: white;
+  box-shadow: rgb(0 0 0 / 35%) 0px 31px 20px;
+  overflow: hidden;
+  overflow-y: auto;
+  border-radius: 0 0 14px 14px;
+}
+
+.dataResult::-webkit-scrollbar {
+  width: 5px;
+  height: 8px;
+  border-radius: 14px;
+  background-color: rgb(220, 220, 220); /* or add it to the track */
+}
+.dataResult::-webkit-scrollbar-thumb {
+  border-radius: 14px;
+  background: rgb(148, 148, 148);
+}
+
+.dataResult .dataItem {
+  width: 100%;
+  cursor: pointer;
+
+  color: black;
+  font-size: smaller;
+}
+
+.dataItem p {
+  margin: 0;
+  padding: 16px;
+}
+
+.dataResult :hover {
+  background-color: #ebeeef;
+}
+
+#clearBtn {
+  cursor: pointer;
+  /* position: absolute;
+    top: 0; */
+}

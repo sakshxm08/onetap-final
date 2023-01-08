@@ -1,0 +1,29 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@600&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Quicksand&display=swap");
+.footerParentDiv {
+  width: 100vw;
+}
+.footerParentDiv .content {
+  display: flex;
+  justify-content: space-around;
+
+  background: #141414;
+
+  padding: 50px;
+}
+
+.footerParentDiv .content .heading p {
+  color: white;
+  font-size: 16px;
+  font-weight: bold;
+  font-family: "Montserrat", sans-serif;
+}
+
+.list ul {
+  padding-inline-start: 0;
+}
+.list ul li {
+  list-style: none;
+  color: #cccccc;
+  font-family: "Quicksand", sans-serif;
+}
