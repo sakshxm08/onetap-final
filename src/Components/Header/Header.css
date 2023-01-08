@@ -232,3 +232,6 @@
   opacity: 1;
   right: 0;
 }
+.hover-btn:hover {
+  background-color: #005a66;
+}
