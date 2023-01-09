@@ -6,8 +6,13 @@ import "./Header.css";
 import OlxLogo from "../../assets/OlxLogo";
 import SearchIcon from "@mui/icons-material/Search";
 import Arrow from "../../assets/Arrow";
+<<<<<<< HEAD
 // import SellButton from "../../assets/SellButton";
 // import SellButtonPlus from "../../assets/SellButtonPlus";
+=======
+//import SellButton from "../../assets/SellButton";
+//import SellButtonPlus from "../../assets/SellButtonPlus";
+>>>>>>> fa0dc758a0679356853f1891e304fd72ce391fd1
 import { Link } from "react-router-dom";
 import { AuthContext } from "../../contextStore/AuthContext";
 import { Firebase } from "../../firebase/config";

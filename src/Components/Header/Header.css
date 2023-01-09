@@ -277,6 +277,7 @@
   opacity: 1;
   right: 0;
 }
+<<<<<<< HEAD
 
 /* -------------------------------------------------------- */
 .homeParentDiv {
@@ -293,4 +294,8 @@
 }
 .buttonsHeader {
   width: 24vw;
+=======
+.hover-btn:hover {
+  background-color: #005a66;
+>>>>>>> fa0dc758a0679356853f1891e304fd72ce391fd1
 }
