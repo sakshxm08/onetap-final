@@ -1,33 +1,54 @@
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap");
 .bannerParentDiv .bannerChildDiv .menuBar {
   padding: 10px 16px;
-  background-color: #141414;
+  background-color: #252525;
   color: white;
   position: sticky;
-
   z-index: 998;
   top: 80px;
 }
 
 .bannerCategory {
-  transition: color 0.2s ease-in-out;
   font-family: "Montserrat", sans-serif;
+  display: inline-block;
+  position: relative;
+  color: #ffffff;
 }
-.bannerCategory:hover {
-  color: rgb(200, 200, 200);
+
+.bannerCategory::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  transform: scaleX(0);
+  height: 2px;
+  bottom: 0;
+  left: 0;
+
+  background-color: rgb(255, 255, 255);
+
+  transform-origin: bottom right;
+  transition: transform 0.3s ease-out;
 }
+
+.bannerCategory:hover::after {
+  transform: scaleX(1);
+  transform-origin: bottom left;
+}
+
 .bannerParentDiv .bannerChildDiv .menuBar .categoryMenu span {
   margin-right: 16px;
   font-weight: bolder;
 }
 
 .bannerParentDiv .bannerChildDiv .menuBar .otherQuickOptions span {
-  padding: 10px;
+  margin: 2px;
+  padding-bottom: 2px;
+  font-size: 14px;
 }
 
 .bannerChildDiv .banner {
   position: relative;
-  margin-top: 16px;
+  margin-top: 8px;
   width: 100vw;
 }
 .bannerChildDiv .banner img {

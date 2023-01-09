@@ -1,13 +1,24 @@
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@600&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Comfortaa:wght@600&display=swap");
-.moreView {
+.postParentDiv .moreView {
   margin: 16px 0 24px;
   padding: 16px 16px 32px;
   /* background-color: #90d4d485; */
   /* background: linear-gradient(90deg, #1cb5e0 0%, #000851 100%); */
-  background-image: url(./bgImgBlue.jpeg);
+  /* background-image: url(./bgImgBlue.jpeg);
   background-repeat: no-repeat;
-  background-size: cover;
+  background-size: cover; */
+  background: #141e30; /* fallback for old browsers */
+  background: -webkit-linear-gradient(
+    to right,
+    #243b55,
+    #141e30
+  ); /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(
+    to right,
+    #243b55,
+    #141e30
+  ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 }
 
 .heading {
@@ -88,4 +99,34 @@
 }
 .quick-menu-cards .card {
   margin-right: 28px;
+}
+
+.moreView .heading a span {
+  cursor: pointer;
+  font-weight: 600;
+  text-decoration: none;
+  color: white;
+  position: relative;
+  font-family: "Montserrat", sans-serif;
+  transition: color 0.3s ease;
+}
+.moreView .heading a span:after {
+  background: none repeat scroll 0 0 transparent;
+  bottom: -2px;
+  content: "";
+  display: block;
+  height: 2px;
+  left: 50%;
+  position: absolute;
+  background: rgb(219, 219, 219);
+  transition: width 0.3s ease 0s, left 0.3s ease 0s;
+  width: 0;
+}
+.moreView .heading a span:hover:after {
+  width: 100%;
+  left: 0;
+}
+
+.moreView .heading a:hover {
+  text-decoration: none;
 }

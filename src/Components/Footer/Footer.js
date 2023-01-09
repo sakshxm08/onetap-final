@@ -8,7 +8,7 @@ function Footer() {
       <div className="content">
         <div>
           <div className="heading">
-            <p>POPULAR LOCATIONS</p>
+            <p>Popular Locations</p>
           </div>
           <div className="list">
             <ul>
@@ -21,7 +21,7 @@ function Footer() {
         </div>
         <div>
           <div className="heading">
-            <p>ABOUT US</p>
+            <p>About Us</p>
           </div>
           <div className="list">
             <ul>

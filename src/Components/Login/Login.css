@@ -10,7 +10,7 @@
   /* width: max-content; */
   width: 50vw;
   padding: 20px;
-  margin: 150px auto 0;
+  margin: 150px auto 80px;
   display: flex;
   justify-content: space-between;
   align-items: center;

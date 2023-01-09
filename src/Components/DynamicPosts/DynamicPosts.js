@@ -15,7 +15,7 @@ function DynamicPosts({ category }) {
   return (
     <>
       {category !== "null" && (
-        <div>
+        <div className="dynamicPosts" id="dynamicPosts">
           <div className="moreView">
             <div className="heading">
               <span>{category}</span>

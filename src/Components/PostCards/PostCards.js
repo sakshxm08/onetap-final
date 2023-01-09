@@ -21,14 +21,16 @@ function PostCards({ product, index }) {
       <div className="image">
         <img src={product.url} alt="" />
       </div>
-      <div className="content">
-        <p className="rate">&#x20B9; {product.price}</p>
-        <span className="category"> {product.category} </span>
-        <p className="name"> {product.name}</p>
-        <p className="location">{product.location}</p>
-      </div>
-      <div className="date">
-        <span>{product.createdAt}</span>
+      <div className="cardContent">
+        <div className="content">
+          <p className="rate">&#x20B9; {product.price}</p>
+          <p className="name"> {product.name}</p>
+          <p className="category"> {product.category} </p>
+          <p className="location">{product.location}</p>
+        </div>
+        <div className="date">
+          <span>{product.createdAt}</span>
+        </div>
       </div>
     </div>
   );

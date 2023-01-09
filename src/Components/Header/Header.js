@@ -4,15 +4,17 @@ import { AllPostContext } from "../../contextStore/AllPostContext";
 import { PostContext } from "../../contextStore/PostContext";
 import "./Header.css";
 import OlxLogo from "../../assets/OlxLogo";
-import SearchIcon from "../../assets/SearchIcon";
+import SearchIcon from "@mui/icons-material/Search";
 import Arrow from "../../assets/Arrow";
-import SellButton from "../../assets/SellButton";
-import SellButtonPlus from "../../assets/SellButtonPlus";
+// import SellButton from "../../assets/SellButton";
+// import SellButtonPlus from "../../assets/SellButtonPlus";
 import { Link } from "react-router-dom";
 import { AuthContext } from "../../contextStore/AuthContext";
 import { Firebase } from "../../firebase/config";
 import Search from "../Search/Search";
-function Header() {
+import LogoutIcon from "@mui/icons-material/Logout";
+import LoginIcon from "@mui/icons-material/Login";
+function Header(props) {
   const { allPost } = useContext(AllPostContext);
   const { setPostContent } = useContext(PostContext);
   const navigate = useNavigate();
@@ -53,87 +55,100 @@ function Header() {
   };
 
   return (
-    <div className="headerParentDiv">
+    <nav className="headerParentDiv">
       <div className="headerChildDiv">
         <div className="brandName">
           <OlxLogo></OlxLogo>
         </div>
-        <div className="placeSearch">
-          <input
-            type="text"
-            placeholder="Search specific product..."
-            value={wordEntered}
-            onChange={handleFilter}
-          />
-          {filteredData.length === 0 ? (
-            <div onClick={handleEmptyClick}>
-              {" "}
-              <SearchIcon />{" "}
-            </div>
-          ) : (
-            <div id="clearBtn" onClick={clearInput}>
-              {" "}
-              <Arrow></Arrow>
-            </div>
-          )}
-          {filteredData.length !== 0 && (
-            <div className="dataResult-header">
-              {filteredData.slice(0, 15).map((value, key) => {
-                return (
-                  <div
-                    key={key}
-                    className="dataItem-header"
-                    onClick={() => handleSelectedSearch(value)}
-                  >
-                    <p>{value.name} </p>
-                  </div>
-                );
-              })}
-            </div>
-          )}
+        <div className="searchDivHeader">
+          <div className="placeSearch">
+            <input
+              type="text"
+              placeholder="Search specific product..."
+              value={wordEntered}
+              onChange={handleFilter}
+            />
+            {filteredData.length === 0 ? (
+              <div onClick={handleEmptyClick} className="searchIcon">
+                {" "}
+                <SearchIcon fontSize="large" />{" "}
+              </div>
+            ) : (
+              <div id="clearBtn" onClick={clearInput}>
+                {" "}
+                <Arrow></Arrow>
+              </div>
+            )}
+            {filteredData.length !== 0 && (
+              <div className="dataResult-header">
+                {filteredData.slice(0, 15).map((value, key) => {
+                  return (
+                    <div
+                      key={key}
+                      className="dataItem-header"
+                      onClick={() => handleSelectedSearch(value)}
+                    >
+                      <p>{value.name} </p>
+                    </div>
+                  );
+                })}
+              </div>
+            )}
+          </div>
+          <div className="productSearch">
+            <Search />
+          </div>
         </div>
-        <div className="productSearch">
-          <Search />
-        </div>
-
         {/* <div className="language">
           <span> ENGLISH </span>
           <Arrow></Arrow>
         </div> */}
-        <div className="loginPage">
-          <i
-            class="fa-solid fa-user pr-2 userIcon"
-            style={{ color: "white" }}
-          ></i>
-          {user ? (
-            user.displayName.slice(0, user.displayName.indexOf(" "))
-          ) : (
-            <Link to="/login">
-              <span className="loginLinkHeader">Login/Register</span>
-            </Link>
+        <div className="buttonsHeader">
+          <div className="loginPage">
+            {user ? (
+              <>
+                <i
+                  class="fa-solid fa-user pr-2 userIcon"
+                  style={{ color: "white" }}
+                ></i>
+                <span>
+                  {`${user.displayName.slice(
+                    0,
+                    user.displayName.indexOf(" ")
+                  )}`}
+                </span>
+              </>
+            ) : (
+              <Link to="/login">
+                <span className="loginLinkHeader">
+                  <LoginIcon />
+                  Login/Register
+                </span>
+              </Link>
+            )}
+          </div>
+          {user && (
+            <span onClick={logoutHandler} className="logout-span">
+              <LogoutIcon />
+              Logout
+            </span>
           )}
-          <hr />
-        </div>
-        {user && (
-          <span onClick={logoutHandler} className="logout-span">
-            Logout
-          </span>
-        )}
 
-        <Link to="/create">
-          {/* {" "} */}
-          {/* <div className="sellMenu"> */}
-          {/* <SellButton></SellButton> */}
-          {/* <div className="sellMenuContent"> */}
-          {/* <SellButtonPlus></SellButtonPlus> */}
-          <button class="headerBtn hover-btn">
-            <span>UPLOAD</span>
-          </button>
-          {/* </div> */}
-          {/* </div> */}
-        </Link>
+          <Link to="/create">
+            {/* {" "} */}
+            {/* <div className="sellMenu"> */}
+            {/* <SellButton></SellButton> */}
+            {/* <div className="sellMenuContent"> */}
+            {/* <SellButtonPlus></SellButtonPlus> */}
+            <button class="headerBtn hover-btn">
+              <span>UPLOAD</span>
+            </button>
+            {/* </div> */}
+            {/* </div> */}
+          </Link>
+        </div>
       </div>
-    </div>
+    </nav>
   );
 }
 

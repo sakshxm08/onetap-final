@@ -1,7 +1,8 @@
 import React, { useState, useContext } from "react";
 import { AllPostContext } from "..//../contextStore/AllPostContext";
 import { PostContext } from "../../contextStore/PostContext";
-import SearchIcon from "..//../assets/SearchIcon";
+import SearchIcon from "@mui/icons-material/Search";
+
 import CloseIcon from "..//../assets/CloseIcon/CloseIcon";
 import { useNavigate } from "react-router-dom";
 import InputHints from "react-input-hints";
@@ -43,7 +44,7 @@ function Search() {
   const handleSearchClick = () => {
     if (filteredData.length === 0) {
       alert(
-        "No items found.., please search by product category or product name"
+        "No items found. Please search by product category or product name."
       );
     } else {
       setAllPost(filteredData);

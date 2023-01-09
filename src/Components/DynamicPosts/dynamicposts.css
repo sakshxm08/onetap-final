@@ -26,3 +26,9 @@
   overflow-y: hidden;
   margin: 20px 40px;
 } */
+
+.dynamicPosts .moreView {
+  margin: 16px 0 24px;
+  padding: 16px 16px 32px;
+  background-image: linear-gradient(to right, #434343 0%, black 100%);
+}

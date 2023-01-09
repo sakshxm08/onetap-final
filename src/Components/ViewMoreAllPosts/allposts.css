@@ -1,8 +1,8 @@
 .display-all-parent {
   padding-bottom: 1em;
   padding-top: 1em;
-  margin: 0 1rem;
-  background-color: #ebeeef;
+  margin: 0;
+  background-color: #141414;
   min-height: 90vh;
   height: max-content;
 }
@@ -10,7 +10,6 @@
 .container-allpost {
   display: flex;
   flex-wrap: wrap;
-
   justify-content: center;
 }
 

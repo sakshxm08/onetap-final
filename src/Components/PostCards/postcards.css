@@ -1,14 +1,17 @@
 .card {
   margin-right: 15px;
-  padding: 30px;
   max-width: 300px;
   width: 300px;
   height: max-content;
   display: inline-block;
   cursor: pointer;
   border-radius: 12px;
+  transition: 0.3s;
+  padding: 30px;
 }
-
+.card:hover {
+  background-color: rgb(226, 226, 226);
+}
 .card .favorite {
   display: flex;
   justify-content: flex-end;
@@ -34,10 +37,11 @@
   font-weight: bold;
 }
 .card .content .category {
-  font-size: medium;
+  font-size: 14px;
 }
 .card .content .name {
-  font-size: small;
+  font-size: medium;
+  margin-bottom: 4px;
 }
 .card .date {
   display: flex;

@@ -30,9 +30,9 @@
 
 .search .searchIcon {
   margin: auto 10px;
-  padding-right: 8px;
+  /* padding-right: 8px; */
   /* background-color: #ebeeef;
-    display: flex; */
+  display: flex; */
   place-items: center;
   color: black;
 }
@@ -41,7 +41,7 @@ input:focus {
   outline: none;
 }
 .searchIcon svg {
-  font-size: 35px;
+  font-size: 25px;
 }
 
 .dataResult {
