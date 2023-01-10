@@ -41,21 +41,25 @@ export default function Signup() {
       {loading && <SignUpLoading />}{" "}
       <div className="signupMainDiv">
         <div className="signupParentDiv">
-          <img
-            width="200px"
-            height="200px"
-            className="sideLogo"
-            src={Logo}
-            alt=""
-          ></img>
-          <form onSubmit={handleSubmit}>
+          <Link to="/">
             <img
-              width="100px"
-              height="100px"
-              className="topLogo"
+              width="200px"
+              height="200px"
+              className="sideLogo"
               src={Logo}
               alt=""
             ></img>
+          </Link>
+          <form onSubmit={handleSubmit}>
+            <Link to="/">
+              <img
+                width="100px"
+                height="100px"
+                className="topLogo"
+                src={Logo}
+                alt=""
+              ></img>
+            </Link>
             <div className="signupHr"></div>
             <h1>Register</h1>
             <span className="label">Full Name</span>

@@ -37,18 +37,18 @@
 }
 .loginParentDiv form .buttons .button {
   width: 100%;
-  background-color: #002f34;
+  background-color: #004e92;
   color: whitesmoke;
   text-decoration: none;
-  border-radius: 8px;
+  border-radius: 28px;
   font-size: 18px;
   height: 40px;
   transition: background-color 0.18s ease-in-out, color 0.18s ease-in-out;
 }
 .loginParentDiv form .buttons .button:hover {
   background-color: white;
-  color: #002f34;
-  border: 2px solid #002f34;
+  color: #004e92;
+  border: 2px solid #004e92;
 }
 .signupLink {
   text-decoration: none;

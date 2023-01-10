@@ -28,13 +28,15 @@ function Login() {
       {loading && <RoundLoading />}
       <div className="loginMainDiv">
         <div className="loginParentDiv">
-          <img
-            width="200px"
-            height="200px"
-            className="sideLogo"
-            src={Logo}
-            alt=""
-          ></img>
+          <Link to="/">
+            <img
+              width="200px"
+              height="200px"
+              className="sideLogo"
+              src={Logo}
+              alt=""
+            ></img>
+          </Link>
           <form onSubmit={handleSubmit}>
             <img
               width="100px"
