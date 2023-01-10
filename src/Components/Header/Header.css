@@ -22,7 +22,7 @@
 /* ---------------------SEARCBAR STYLING---------------------*/
 
 .placeSearch {
-  width: 220px;
+  /* width: 220px; */
   height: 42px;
   display: flex;
   align-items: center;
