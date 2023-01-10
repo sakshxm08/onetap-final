@@ -39,12 +39,26 @@ export default function Signup() {
   return (
     <>
       {loading && <SignUpLoading />}{" "}
-      <div>
+      <div className="signupMainDiv">
         <div className="signupParentDiv">
-          <img width="200px" height="200px" src={Logo} alt=""></img>
+          <img
+            width="200px"
+            height="200px"
+            className="sideLogo"
+            src={Logo}
+            alt=""
+          ></img>
           <form onSubmit={handleSubmit}>
+            <img
+              width="100px"
+              height="100px"
+              className="topLogo"
+              src={Logo}
+              alt=""
+            ></img>
+            <div className="signupHr"></div>
             <h1>Register</h1>
-            <label>Full Name</label>
+            <span className="label">Full Name</span>
             <br />
             <input
               className="input"
@@ -54,7 +68,7 @@ export default function Signup() {
               name="name"
             />
             <br />
-            <label>Email</label>
+            <span className="label">Email</span>
             <br />
             <input
               className="input"
@@ -64,7 +78,7 @@ export default function Signup() {
               name="email"
             />
             <br />
-            <label>Phone</label>
+            <span className="label">Phone</span>
             <br />
             <input
               className="input"
@@ -74,7 +88,7 @@ export default function Signup() {
               name="phone"
             />
             <br />
-            <label>Password</label>
+            <span className="label">Password</span>
             <br />
             <input
               className="input"
@@ -85,7 +99,9 @@ export default function Signup() {
             />
             <br />
             <br />
-            <button>Register</button>
+            <div className="buttons">
+              <button className="button">Register</button>
+            </div>
             <div className="loginDiv">
               <Link to="/login" className="loginLink">
                 Already an user? Login to OneTap

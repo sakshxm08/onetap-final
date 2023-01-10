@@ -1,19 +1,20 @@
-@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@600&display=swap");
-
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600&display=swap");
+.loginMainDiv {
+  display: flex;
+  height: calc(100vh - 70px);
+}
 .loginParentDiv form h1 {
   text-align: center;
   font-family: "Montserrat", sans-serif;
   margin-bottom: 30px;
 }
 .loginParentDiv {
-  /* border: 1px solid black; */
-  /* width: max-content; */
-  width: 50vw;
-  padding: 20px;
-  margin: 150px auto 80px;
   display: flex;
   justify-content: space-between;
   align-items: center;
+  width: 700px;
+  padding: 20px;
+  margin: auto;
   box-shadow: 0 4px 8px 0 rgb(0 0 0 / 20%), 0 6px 20px 0 rgb(0 0 0 / 19%);
 }
 .loginParentDiv form {
@@ -26,10 +27,15 @@
   border-right-color: transparent;
   outline-color: transparent;
   width: 100%;
+  padding-bottom: 2px;
   margin-bottom: 16px;
 }
-
-.button {
+.loginParentDiv form .label {
+  font-family: "Montserrat", sans-serif;
+  padding-left: 4px;
+  font-weight: 500;
+}
+.loginParentDiv form .buttons .button {
   width: 100%;
   background-color: #002f34;
   color: whitesmoke;
@@ -39,14 +45,11 @@
   height: 40px;
   transition: background-color 0.18s ease-in-out, color 0.18s ease-in-out;
 }
-.button:hover {
+.loginParentDiv form .buttons .button:hover {
   background-color: white;
   color: #002f34;
   border: 2px solid #002f34;
 }
-/* .loginParentDiv .buttons {
-  display: flex;
-} */
 .signupLink {
   text-decoration: none;
   color: #002f34;
@@ -75,4 +78,80 @@
 .signupDiv {
   text-align: center;
   padding-top: 20px;
+}
+.loginParentDiv form .topLogo {
+  display: none;
+}
+@media screen and (max-width: 800px) {
+  .loginParentDiv {
+    width: 600px;
+  }
+}
+@media screen and (max-width: 680px) {
+  .loginParentDiv {
+    width: 500px;
+  }
+  .loginParentDiv form {
+    margin: 20px 0;
+  }
+  .loginParentDiv .sideLogo {
+    width: 150px;
+    height: 150px;
+  }
+  .loginParentDiv form h1 {
+    text-align: start;
+  }
+  .signupLink {
+    font-family: "Montserrat", sans-serif;
+    font-size: 13px;
+
+    font-weight: 500px;
+  }
+}
+@media screen and (max-width: 550px) {
+  .loginParentDiv .sideLogo {
+    display: none;
+  }
+  .loginParentDiv form .topLogo {
+    display: block;
+    margin: auto;
+  }
+  .loginParentDiv {
+    width: max-content;
+    padding-top: 0;
+  }
+  .loginParentDiv form {
+    margin: 20px;
+    width: 100%;
+  }
+  .loginHr {
+    margin: 20px 0;
+    height: 1px;
+    background-color: #cdcdcd;
+    width: 100%;
+  }
+  .loginParentDiv form h1 {
+    text-align: center;
+  }
+  .loginParentDiv form .buttons .button {
+    height: 36px;
+    font-size: 15px;
+  }
+}
+@media screen and (max-width: 400px) {
+  .loginParentDiv form h1 {
+    font-size: 36px;
+  }
+
+  .loginParentDiv form .signupDiv .signupLink {
+    font-size: 14px;
+  }
+}
+@media screen and (max-width: 370px) {
+  .loginParentDiv form {
+    margin: 10px;
+  }
+  .loginParentDiv {
+    width: 250px;
+  }
 }

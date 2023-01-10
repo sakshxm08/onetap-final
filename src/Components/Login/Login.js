@@ -26,12 +26,26 @@ function Login() {
   return (
     <>
       {loading && <RoundLoading />}
-      <div>
+      <div className="loginMainDiv">
         <div className="loginParentDiv">
-          <img width="200px" height="200px" src={Logo} alt=""></img>
+          <img
+            width="200px"
+            height="200px"
+            className="sideLogo"
+            src={Logo}
+            alt=""
+          ></img>
           <form onSubmit={handleSubmit}>
+            <img
+              width="100px"
+              height="100px"
+              className="topLogo"
+              src={Logo}
+              alt=""
+            ></img>
+            <div className="loginHr"></div>
             <h1>Login</h1>
-            <label>Email</label>
+            <span className="label">Email</span>
             <br />
             <input
               className="input"
@@ -42,7 +56,7 @@ function Login() {
               onChange={(e) => setEmail(e.target.value)}
             />
             <br />
-            <label>Password</label>
+            <span className="label">Password</span>
             <br />
             <input
               className="input"
