@@ -111,7 +111,7 @@ function Header(props) {
                   class="fa-solid fa-user pr-2 userIcon"
                   style={{ color: "white" }}
                 ></i>
-                <span>
+                <span className="username">
                   {`${user.displayName.slice(
                     0,
                     user.displayName.indexOf(" ")
@@ -122,16 +122,18 @@ function Header(props) {
               <Link to="/login">
                 <span className="loginLinkHeader">
                   <LoginIcon />
-                  Login/Register
+                  <span>Login/Register</span>
                 </span>
               </Link>
             )}
           </div>
           {user && (
-            <span onClick={logoutHandler} className="logout-span">
-              <LogoutIcon />
-              Logout
-            </span>
+            <>
+              <span onClick={logoutHandler} className="logout-span">
+                <LogoutIcon />
+                <span>Logout</span>
+              </span>
+            </>
           )}
 
           <Link to="/create">

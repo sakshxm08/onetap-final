@@ -88,7 +88,9 @@ function Posts() {
       )}
       <div className="recommendations">
         <div className="heading" id="recHeading">
+          <div className="hrBar"></div>
           <span>Top-Picks</span>
+          <div className="hrBar"></div>
         </div>
         <div className="fresh-recomendation-cards">
           {loading2 ? <BarLoading /> : freshRecomendationCards}

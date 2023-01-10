@@ -13,7 +13,6 @@
 
 /* ---------------------HEADER CHILD---------------------*/
 .headerChildDiv {
-  width: 100%;
   margin: auto;
   display: flex;
   justify-content: space-between;
@@ -53,13 +52,6 @@
   background-color: #343434;
   border-radius: 8px;
   /* border: 0.5px #454545 solid; */
-}
-
-@media only screen and (max-width: 700px) {
-  .placeSearch,
-  .productSearch {
-    display: none;
-  }
 }
 
 /* ---------------------DROPDOWN STYLING---------------------*/
@@ -134,6 +126,7 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
+  flex-direction: row;
   width: 142px;
 }
 .loginLinkHeader:after {
@@ -228,7 +221,6 @@
   outline: none;
   border-radius: 5px;
   text-align: center;
-  font-size: 20px;
   color: #fff;
   cursor: pointer;
   transition: all 0.4s;
@@ -260,6 +252,7 @@
   display: inline-block;
   cursor: pointer;
   transition: 0.5s;
+  font-size: 20px;
   font-family: "Sofia Sans Condensed", sans-serif;
 }
 .hover-btn span::after {
@@ -293,4 +286,89 @@
 }
 .buttonsHeader {
   width: 24vw;
+}
+
+/* -------------------MEDIA QUERIES------------------- */
+@media screen and (max-width: 1300px) {
+  .buttonsHeader {
+    width: 28vw;
+  }
+}
+@media screen and (max-width: 1100px) {
+  .loginPage,
+  .logout-span {
+    font-size: 14px;
+  }
+  .logout-span {
+    width: 72px;
+  }
+  .buttonsHeader a button {
+    height: 30px;
+    padding: 0 2px;
+    width: 95px;
+  }
+  .buttonsHeader a button span {
+    height: 24px;
+    font-size: 18px;
+  }
+}
+@media screen and (max-width: 970px) {
+  .logout-span span {
+    display: none;
+  }
+  .logout-span {
+    width: max-content;
+  }
+}
+@media screen and (max-width: 970px) {
+  .searchDivHeader {
+    justify-content: space-around;
+  }
+}
+@media screen and (max-width: 870px) {
+  .placeSearch {
+    display: none;
+  }
+  .searchDivHeader {
+    justify-content: flex-start;
+    margin-left: 40px;
+    width: 30vw;
+  }
+  .buttonsHeader {
+    width: 50vw;
+    justify-content: flex-end;
+  }
+  .loginPage,
+  .logout-span {
+    padding: 0 20px;
+  }
+  .logout-span {
+    padding-left: 0;
+  }
+}
+@media only screen and (max-width: 650px) {
+  .loginPage .username {
+    display: none;
+  }
+  .loginLinkHeader span {
+    display: none;
+  }
+  .buttonsHeader {
+    margin-left: 20px;
+  }
+  .loginLinkHeader {
+    width: fit-content;
+  }
+}
+@media screen and (max-width: 580px) {
+  .productSearch {
+    display: none;
+  }
+}
+@media screen and (max-width: 500px) {
+  .buttonsHeader {
+    width: 70vw;
+
+    margin-left: 0;
+  }
 }

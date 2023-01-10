@@ -91,3 +91,24 @@ input:focus {
   /* position: absolute;
     top: 0; */
 }
+
+@media screen and (max-width: 1400px) {
+  .search input {
+    width: 25em;
+  }
+}
+@media screen and (max-width: 1220px) {
+  .search input {
+    width: 20em;
+  }
+}
+@media screen and (max-width: 1080px) {
+  .search input {
+    width: 15em;
+  }
+}
+@media screen and (max-width: 970px) {
+  .search input {
+    width: 12em;
+  }
+}

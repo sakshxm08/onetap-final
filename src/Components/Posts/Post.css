@@ -80,15 +80,15 @@
 }
 
 .fresh-recomendation-cards {
-  margin: 2em;
+  margin: 2em auto;
   display: flex;
 
-  justify-content: space-evenly;
+  justify-content: space-around;
 }
 .fresh-recomendation-card {
   display: flex;
   white-space: nowrap;
-  justify-content: space-evenly;
+  justify-content: space-between;
   margin-bottom: 2em;
 }
 .quick-menu-cards {
@@ -129,4 +129,26 @@
 
 .moreView .heading a:hover {
   text-decoration: none;
+}
+.hrBar {
+  height: 1px;
+  background-color: white;
+  width: 150px;
+  margin: 0 30px;
+}
+@media screen and (max-width: 1300px) {
+  .fresh-recomendation-cards {
+    display: grid;
+    grid-template-columns: auto auto;
+    margin: 2em 60px;
+  }
+}
+@media screen and (max-width: 650px) {
+  .recommendations .heading span {
+    font-size: 36px;
+  }
+  .fresh-recomendation-cards {
+    grid-template-columns: auto;
+    margin: 2em 60px;
+  }
 }
