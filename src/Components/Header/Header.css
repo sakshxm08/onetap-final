@@ -345,8 +345,11 @@
   .logout-span {
     padding-left: 0;
   }
+  .loginLinkHeader {
+    width: 132px;
+  }
 }
-@media only screen and (max-width: 650px) {
+@media only screen and (max-width: 660px) {
   .loginPage .username {
     display: none;
   }
@@ -364,7 +367,7 @@
     width: fit-content;
   }
 }
-@media screen and (max-width: 580px) {
+@media screen and (max-width: 600px) {
   .productSearch {
     display: none;
   }
