@@ -20,10 +20,10 @@ export default function OlxLogo() {
       xmlns="http://www.w3.org/2000/svg"
       x="0px"
       y="0px"
-      width="100%"
+      //   width="100%"
       viewBox="0 0 498 229"
       enable-background="new 0 0 498 229"
-      style={{ height: "48px" }}
+      style={{ width: "100px", margin: "-15px 5px" }}
     >
       <path
         fill="#000000"
