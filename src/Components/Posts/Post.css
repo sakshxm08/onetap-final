@@ -136,6 +136,7 @@
   width: 150px;
   margin: 0 30px;
 }
+
 @media screen and (max-width: 1300px) {
   .fresh-recomendation-cards {
     display: grid;
@@ -150,5 +151,20 @@
   .fresh-recomendation-cards {
     grid-template-columns: auto;
     margin: 2em 60px;
+  }
+
+  .hrBar {
+    height: 1px;
+    background-color: white;
+    width: 80px;
+    margin: 0 30px;
+  }
+  .fresh-recomendation-cards .fresh-recomendation-card .card {
+    margin-right: 0;
+  }
+}
+@media screen and (max-width: 500px) {
+  .recommendations .heading span {
+    font-size: 28px;
   }
 }

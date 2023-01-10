@@ -356,6 +356,10 @@
   .buttonsHeader {
     margin-left: 20px;
   }
+  .buttonsHeader a button {
+    background: transparent;
+    background-color: #004e92;
+  }
   .loginLinkHeader {
     width: fit-content;
   }

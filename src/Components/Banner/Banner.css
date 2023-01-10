@@ -73,3 +73,25 @@
   width: 60%;
   margin: auto;
 }
+
+/* --------------------MEDIA QUERIES-------------------- */
+@media screen and (max-width: 1400px) {
+  .otherQuickOptions {
+    justify-content: space-between;
+    width: 80%;
+  }
+}
+@media screen and (max-width: 870px) {
+  .otherQuickOptions {
+    justify-content: space-between;
+    width: 100%;
+  }
+  .bannerParentDiv .bannerChildDiv .menuBar .otherQuickOptions span {
+    font-size: 12px;
+  }
+}
+@media screen and (max-width: 650px) {
+  .menuBar {
+    display: none;
+  }
+}
