@@ -255,7 +255,7 @@
   font-size: 20px;
   font-family: "Sofia Sans Condensed", sans-serif;
 }
-.hover-btn span::after {
+.hover-btn .upload::after {
   position: absolute;
   content: "→";
   opacity: 0;
@@ -263,14 +263,16 @@
   right: -25px;
   transition: 0.5s;
 }
-.hover-btn:hover span {
+.hover-btn:hover .upload {
   padding-right: 25px;
 }
-.hover-btn:hover span::after {
+.hover-btn:hover .upload::after {
   opacity: 1;
   right: 0;
 }
-
+.buttonsHeader a .headerBtn .plusSign {
+  display: none;
+}
 /* -------------------------------------------------------- */
 .homeParentDiv {
   background-color: #141414;
@@ -377,5 +379,33 @@
     width: 70vw;
 
     margin-left: 0;
+  }
+}
+@media screen and (max-width: 370px) {
+  .buttonsHeader a .headerBtn .upload {
+    display: none;
+  }
+  .buttonsHeader a .headerBtn .plusSign {
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    font-size: 30px;
+  }
+  .buttonsHeader a .headerBtn {
+    justify-content: center;
+    align-items: center;
+    padding: 5px;
+    display: flex;
+    width: 30px;
+    border-radius: 30px;
+  }
+  .headerParentDiv {
+    padding-left: 0;
+  }
+}
+@media screen and (max-width: 310px) {
+  .loginPage,
+  .logout-span {
+    padding: 0 10px;
   }
 }

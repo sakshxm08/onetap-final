@@ -179,3 +179,47 @@
     font-size: 28px;
   }
 }
+@media screen and (max-width: 450px) {
+  .recommendations .heading span,
+  .moreView .heading .quickMenu {
+    font-size: 28px;
+  }
+  .moreView .heading a span {
+    font-size: 12px;
+  }
+  .moreView .heading {
+    margin-left: 10px;
+    margin-right: 10px;
+  }
+  .hrBar {
+    width: 50px;
+    margin: 0 10px;
+  }
+}
+@media screen and (max-width: 370px) {
+  .fresh-recomendation-cards .fresh-recomendation-card .card {
+    width: 250px;
+    max-width: 250px;
+  }
+  .recommendations .heading span,
+  .moreView .heading .quickMenu {
+    font-size: 24px;
+  }
+  .moreView .heading a span {
+    font-size: 10px;
+  }
+}
+@media screen and (max-width: 310px) {
+  .fresh-recomendation-cards .fresh-recomendation-card .card,
+  .quick-menu-cards .card {
+    width: 230px;
+    max-width: 230px;
+  }
+  .recommendations .heading span,
+  .moreView .heading .quickMenu {
+    font-size: 20px;
+  }
+  .moreView .heading a span {
+    font-size: 8px;
+  }
+}

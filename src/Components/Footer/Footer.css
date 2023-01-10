@@ -19,11 +19,34 @@
   font-family: "Montserrat", sans-serif;
 }
 
-.list ul {
+.footerParentDiv .content .list ul {
   padding-inline-start: 0;
 }
-.list ul li {
+.footerParentDiv .content .list ul li {
   list-style: none;
   color: #cccccc;
   font-family: "Quicksand", sans-serif;
+}
+.footerParentDiv .content .heading {
+  display: block;
+}
+@media screen and (max-width: 660px) {
+  .footerParentDiv .content {
+    padding: 50px 25px;
+    justify-content: space-between;
+  }
+}
+@media screen and (max-width: 550px) {
+  .footerParentDiv .content {
+    flex-direction: column;
+    /* margin-left: 40px; */
+    text-align: center;
+  }
+  .footerParentDiv .content .heading p {
+    margin-bottom: 5px;
+  }
+
+  .footerParentDiv .content .list ul {
+    margin-bottom: 40px;
+  }
 }

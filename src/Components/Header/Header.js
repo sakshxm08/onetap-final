@@ -143,7 +143,8 @@ function Header(props) {
             {/* <div className="sellMenuContent"> */}
             {/* <SellButtonPlus></SellButtonPlus> */}
             <button class="headerBtn hover-btn">
-              <span>UPLOAD</span>
+              <span className="upload">UPLOAD</span>
+              <span className="plusSign">+</span>
             </button>
             {/* </div> */}
             {/* </div> */}

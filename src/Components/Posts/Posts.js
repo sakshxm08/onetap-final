@@ -44,8 +44,16 @@ function Posts() {
             id: product.id,
           };
         });
-        setPosts(allPostsAscendingOder);
-        setLoading2(false);
+        if (allPostsAscendingOder.length === 0) {
+          document.getElementById("cards").innerHTML =
+            '<div style="color:white; display: flex; justify-content: center; align-items:center;"><span>Network failed. Check your connection !</span></div>';
+          document.getElementById("recommendations").innerHTML =
+            '<div style="color:white; width:100vw;display: flex; justify-content: center; align-items:center;"><span>Network failed. Check your connection !</span></div>';
+        } else {
+          setPosts(allPostsAscendingOder);
+          setLoading2(false);
+        }
+        console.log(allPostsAscendingOder);
       });
   }, [setAllPost]);
   // quickMenuCards assign all cards of post item later it will be displayed
@@ -80,7 +88,7 @@ function Posts() {
               <span>View more</span>{" "}
             </Link>
           </div>
-          <div className="cards">
+          <div className="cards" id="cards">
             {" "}
             {loading ? <BarLoading /> : quickMenuCards}
           </div>
@@ -92,7 +100,7 @@ function Posts() {
           <span>Top-Picks</span>
           <div className="hrBar"></div>
         </div>
-        <div className="fresh-recomendation-cards">
+        <div className="fresh-recomendation-cards" id="recommendations">
           {loading2 ? <BarLoading /> : freshRecomendationCards}
         </div>
       </div>
