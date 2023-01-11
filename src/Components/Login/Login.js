@@ -38,13 +38,16 @@ function Login() {
             ></img>
           </Link>
           <form onSubmit={handleSubmit}>
-            <img
-              width="100px"
-              height="100px"
-              className="topLogo"
-              src={Logo}
-              alt=""
-            ></img>
+            <Link to="/">
+              <img
+                width="100px"
+                height="100px"
+                className="topLogo"
+                src={Logo}
+                alt=""
+              ></img>
+            </Link>
+
             <div className="loginHr"></div>
             <h1>Login</h1>
             <span className="label">Email</span>

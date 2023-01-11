@@ -1,21 +1,39 @@
-@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@600&display=swap");
-.centerDiv {
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600&display=swap");
+.createMainDiv {
+  display: flex;
+  /* height: calc(100vh - 70px); */
+}
+.createParentDiv {
   box-shadow: 0 4px 8px 0 rgb(0 0 0 / 20%), 0 6px 20px 0 rgb(0 0 0 / 19%);
-  width: 40vw;
+  /* width: 90%; */
+  width: 900px;
   padding: 40px;
   margin: 80px auto 80px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.centerDiv {
   flex-direction: column;
   display: flex;
   justify-content: center;
+  width: 60%;
+  margin: 20px;
 }
 .centerDiv .input {
   border: none;
   border-bottom: 1px grey solid;
   outline: none;
-  margin: 8px 0 8px;
+  margin: 0px 0 16px;
   background-color: transparent;
+  padding-bottom: 2px;
+  font-weight: 300;
 }
+.centerDiv .label {
+  font-family: "Montserrat", sans-serif;
 
+  font-weight: 500;
+}
 /* .uploadBtn {
   margin-top: 30px;
   width: 100%;
@@ -32,10 +50,10 @@
 } */
 .centerDiv .uploadBtn {
   width: 100%;
-  background-color: #002f34;
+  background-color: #004e92;
   color: whitesmoke;
   text-decoration: none;
-  border-radius: 8px;
+  border-radius: 28px;
   margin-top: 50px;
   font-size: 18px;
   height: 40px;
@@ -43,12 +61,8 @@
 }
 .centerDiv .uploadBtn:hover {
   background-color: white;
-  color: #002f34;
-  border: 2px solid #002f34;
-}
-.centerDiv label {
-  font-weight: bold;
-  margin: 8px 0;
+  color: #004e92;
+  border: 2px solid #004e92;
 }
 .centerDiv .categDrop {
   margin: 8px 0 16px;
@@ -62,6 +76,7 @@
 .centerDiv h1 {
   font-family: "Montserrat", sans-serif;
   text-align: center;
+  margin-bottom: 20px;
 }
 .centerDiv img {
   margin: 10px auto;
@@ -109,4 +124,81 @@
 .cancelUploadDiv {
   text-align: center;
   padding-top: 20px;
+}
+.createParentDiv form .topLogo {
+  display: none;
+}
+@media screen and (max-width: 1000px) {
+  .createParentDiv {
+    width: 700px;
+  }
+  .createParentDiv .sideLogo {
+    width: 175px;
+    height: 175px;
+  }
+  .centerDiv {
+    width: 65%;
+  }
+}
+@media screen and (max-width: 800px) {
+  .createParentDiv {
+    width: 90%;
+  }
+  .createParentDiv .sideLogo {
+    display: none;
+  }
+  .createParentDiv form .topLogo {
+    display: block;
+    margin: auto;
+  }
+  .createParentDiv form {
+    margin: 20px;
+    width: 100%;
+  }
+  .createParentDiv .loginHr {
+    margin: 20px 0;
+    height: 1px;
+    background-color: #cdcdcd;
+    width: 100%;
+  }
+}
+@media screen and (max-width: 500px) {
+  .centerDiv .uploadBtn {
+    height: 36px;
+    font-size: 16px;
+  }
+  .createParentDiv form h1 {
+    font-size: 36px;
+  }
+  .cancelUploadLink {
+    font-size: 14px;
+  }
+  .createParentDiv .noImg {
+    width: 100px;
+    height: auto;
+  }
+  .createParentDiv form {
+    margin: 0;
+  }
+  .createParentDiv {
+    padding: 40px 20px;
+    width: 100%;
+    margin: 0;
+  }
+  .fileInp {
+    width: auto;
+  }
+}
+@media screen and (max-width: 304px) {
+  .centerDiv .categDrop select {
+    margin-left: 0;
+    margin-top: 15px;
+  }
+  .centerDiv .categDrop {
+    display: flex;
+    flex-direction: column;
+  }
+  .createParentDiv form h1 {
+    font-size: 32px;
+  }
 }
