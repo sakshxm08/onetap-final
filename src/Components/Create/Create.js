@@ -1,16 +1,17 @@
 import React, { Fragment, useState, useContext } from "react";
 import "./Create.css";
 import { Link } from "react-router-dom";
-
 import { Firebase } from "../../firebase/config";
 import { AuthContext } from "../../contextStore/AuthContext";
 import { useNavigate } from "react-router-dom";
 import GoLoading from "../Loading/GoLoading";
 import noImg from "../../assets/no-image.png";
 import Logo from "../../onetap_logo.png";
+import Header from "../Header/Header";
 
 const Create = () => {
   const { user } = useContext(AuthContext);
+  console.log(user);
   const navigate = useNavigate();
   let [name, setName] = useState("");
   let [category, setCategory] = useState("");
@@ -49,6 +50,7 @@ const Create = () => {
 
   return (
     <Fragment>
+      <Header />
       {loading && <GoLoading />}
       <div className="createMainDiv">
         <div className="createParentDiv">
@@ -61,7 +63,7 @@ const Create = () => {
               alt=""
             ></img>
           </Link>
-          <form className="centerDiv" onSubmit={handleSubmit}>
+          <div className="centerDiv">
             <Link to="/">
               <img
                 width="100px"
@@ -83,7 +85,6 @@ const Create = () => {
               onChange={(e) => {
                 setName(e.target.value);
               }}
-              required
             />
 
             <div className="categDrop">
@@ -97,10 +98,10 @@ const Create = () => {
               >
                 {" "}
                 <option>Select Category</option>
-                <option value="Auditorium">Auditorium</option>
-                <option value="Gym">Gym</option>
-                <option value="Swimming Pool">Swimming Pool</option>
-                <option value="Cafe">Cafe</option>
+                <option value="Auditoriums">Auditoriums</option>
+                <option value="Gyms">Gyms</option>
+                <option value="Swimming Pools">Swimming Pools</option>
+                <option value="Cafes">Cafes</option>
                 <option value="Open Grounds">Open Grounds</option>
                 <option value="Lounges">Lounges</option>
               </select>
@@ -116,7 +117,6 @@ const Create = () => {
               onChange={(e) => {
                 setPrice(e.target.value);
               }}
-              required
             />
 
             <span className="label">Description</span>
@@ -131,7 +131,6 @@ const Create = () => {
               onChange={(e) => {
                 setDescription(e.target.value);
               }}
-              required
             />
 
             <span className="label">Location</span>
@@ -144,7 +143,6 @@ const Create = () => {
               onChange={(e) => {
                 setLocation(e.target.value);
               }}
-              required
             />
 
             <img
@@ -160,15 +158,16 @@ const Create = () => {
                 setImage(e.target.files[0]);
               }}
               className="fileInp"
-              required
             />
-            <button className="uploadBtn">Upload and Submit</button>
+            <button className="uploadBtn" onClick={handleSubmit}>
+              Upload and Submit
+            </button>
             <div className="cancelUploadDiv">
               <Link to="/" className="cancelUploadLink">
                 Cancel the upload
               </Link>
             </div>
-          </form>
+          </div>
         </div>
       </div>
     </Fragment>

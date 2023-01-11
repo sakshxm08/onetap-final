@@ -31,13 +31,13 @@
   justify-content: center;
   align-items: center;
 }
-.heading :first-child {
+.heading:first-child {
   font-size: 36px;
   color: white;
   font-family: "Montserrat", sans-serif;
 }
 
-.heading :last-child {
+.heading a span {
   font-size: 14px;
   font-family: "Montserrat", sans-serif;
   color: white;
@@ -100,6 +100,10 @@
 .quick-menu-cards .card {
   margin-right: 28px;
 }
+.moreView .heading a {
+  display: flex;
+  align-items: center;
+}
 
 .moreView .heading a span {
   cursor: pointer;
@@ -136,12 +140,17 @@
   width: 150px;
   margin: 0 30px;
 }
-
+.fresh-recomendation-card:last-child .card {
+  margin-right: 0;
+}
 @media screen and (max-width: 1300px) {
   .fresh-recomendation-cards {
     display: grid;
     grid-template-columns: auto auto;
     margin: 2em 60px;
+  }
+  .fresh-recomendation-card:nth-child(even) .card {
+    margin-right: 0;
   }
 }
 @media screen and (max-width: 870px) {
@@ -178,6 +187,11 @@
   .moreView .heading .quickMenu {
     font-size: 28px;
   }
+
+  .moreView .heading {
+    margin-left: 15px;
+    margin-right: 15px;
+  }
 }
 @media screen and (max-width: 450px) {
   .recommendations .heading span,
@@ -187,6 +201,7 @@
   .moreView .heading a span {
     font-size: 12px;
   }
+
   .moreView .heading {
     margin-left: 10px;
     margin-right: 10px;

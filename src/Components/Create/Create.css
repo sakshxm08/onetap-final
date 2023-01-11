@@ -125,7 +125,7 @@
   text-align: center;
   padding-top: 20px;
 }
-.createParentDiv form .topLogo {
+.createParentDiv .centerDiv .topLogo {
   display: none;
 }
 @media screen and (max-width: 1000px) {
@@ -147,11 +147,11 @@
   .createParentDiv .sideLogo {
     display: none;
   }
-  .createParentDiv form .topLogo {
+  .createParentDiv .centerDiv .topLogo {
     display: block;
     margin: auto;
   }
-  .createParentDiv form {
+  .createParentDiv .centerDiv {
     margin: 20px;
     width: 100%;
   }
@@ -167,7 +167,7 @@
     height: 36px;
     font-size: 16px;
   }
-  .createParentDiv form h1 {
+  .createParentDiv .centerDiv h1 {
     font-size: 36px;
   }
   .cancelUploadLink {
@@ -177,11 +177,11 @@
     width: 100px;
     height: auto;
   }
-  .createParentDiv form {
+  .createParentDiv .centerDiv {
     margin: 0;
   }
   .createParentDiv {
-    padding: 40px 20px;
+    padding: 40px 50px;
     width: 100%;
     margin: 0;
   }
@@ -198,7 +198,7 @@
     display: flex;
     flex-direction: column;
   }
-  .createParentDiv form h1 {
+  .createParentDiv .centerDiv h1 {
     font-size: 32px;
   }
 }

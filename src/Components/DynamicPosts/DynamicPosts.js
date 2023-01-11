@@ -2,7 +2,7 @@ import React, { useContext } from "react";
 import "./dynamicposts.css";
 import { AllPostContext } from "../../contextStore/AllPostContext";
 import PostCards from "../PostCards/PostCards";
-import { Link } from "react-router-dom";
+// import { Link } from "react-router-dom";
 
 function DynamicPosts({ category }) {
   const { allPost } = useContext(AllPostContext);
@@ -18,11 +18,11 @@ function DynamicPosts({ category }) {
         <div className="dynamicPosts" id="dynamicPosts">
           <div className="moreView">
             <div className="heading">
-              <span>{category}</span>
-              <Link to="./viewmore">
+              <span className="dynamicCateg">{category}</span>
+              {/* <Link to="./viewmore">
                 {" "}
-                <span>View more</span>{" "}
-              </Link>
+                <span className="dynamicViewMore">View more</span>{" "}
+              </Link> */}
             </div>
             <div className="cards">{displayCards}</div>
           </div>

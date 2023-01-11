@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import { useNavigate } from "react-router-dom";
 import { Firebase } from "../../firebase/config";
+// import { getAuth, signInWithPopup, GoogleAuthProvider } from "firebase/auth";
 import Logo from "../../onetap_logo.png";
 import RoundLoading from "../Loading/RoundLoading";
 import "./Login.css";
@@ -23,6 +24,37 @@ function Login() {
         alert(error.message);
       });
   };
+  // -------------------GOOGLE LOGIN----------------------- //
+  // const googleLogin = (e) => {
+  //   e.preventDefault();
+
+  //   const provider = new GoogleAuthProvider();
+  //   const auth = getAuth();
+  //   signInWithPopup(auth, provider)
+  //     .then((result) => {
+  //       navigate("/");
+  //       // This gives you a Google Access Token. You can use it to access the Google API.
+  //       const credential = GoogleAuthProvider.credentialFromResult(result);
+  //       const token = credential.accessToken;
+  //       console.log(token);
+  //       // The signed-in user info.
+  //       const user = result.user;
+  //       console.log(user);
+  //       // ...
+  //     })
+  //     .catch((error) => {
+  //       // Handle Errors here.
+  //       const errorCode = error.code;
+  //       console.log(errorCode);
+  //       const errorMessage = error.message;
+  //       console.log(errorMessage);
+  //       // The email of the user's account used.
+  //       // const email = error.customData.email;
+  //       // The AuthCredential type that was used.
+  //       // const credential = GoogleAuthProvider.credentialFromError(error);
+  //       // ...
+  //     });
+  // };
   return (
     <>
       {loading && <RoundLoading />}
@@ -74,6 +106,12 @@ function Login() {
             <div className="buttons">
               <button className="button">Login</button>
             </div>
+            {/* <div className="buttons">
+              <button className="button" onClick={googleLogin}>
+                Login with Google
+              </button>
+            </div> */}
+
             <div className="signupDiv">
               <Link to="/signup" className="signupLink">
                 New to OneTap? Create an account

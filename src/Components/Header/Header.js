@@ -137,17 +137,17 @@ function Header(props) {
           )}
 
           <Link to="/create">
-            {/* {" "} */}
-            {/* <div className="sellMenu"> */}
-            {/* <SellButton></SellButton> */}
-            {/* <div className="sellMenuContent"> */}
-            {/* <SellButtonPlus></SellButtonPlus> */}
+            {/* {" "}
+            <div className="sellMenu">
+              <SellButton></SellButton>
+              <div className="sellMenuContent">
+                <SellButtonPlus></SellButtonPlus>
+              </div>
+            </div> */}
             <button class="headerBtn hover-btn">
               <span className="upload">UPLOAD</span>
               <span className="plusSign">+</span>
             </button>
-            {/* </div> */}
-            {/* </div> */}
           </Link>
         </div>
       </div>

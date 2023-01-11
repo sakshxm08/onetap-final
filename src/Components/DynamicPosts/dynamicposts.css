@@ -32,3 +32,23 @@
   padding: 16px 16px 32px;
   background-image: linear-gradient(to right, #434343 0%, black 100%);
 }
+@media screen and (max-width: 600px) {
+  .dynamicPosts .heading .dynamicCateg {
+    font-size: 32px;
+  }
+}
+@media screen and (max-width: 500px) {
+  .dynamicPosts .heading .dynamicCateg {
+    font-size: 32px;
+  }
+}
+@media screen and (max-width: 410px) {
+  .dynamicPosts .heading .dynamicCateg {
+    font-size: 24px;
+  }
+}
+@media screen and (max-width: 330px) {
+  .dynamicPosts .heading .dynamicCateg {
+    font-size: 20px;
+  }
+}

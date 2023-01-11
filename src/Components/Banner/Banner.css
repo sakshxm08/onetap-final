@@ -23,9 +23,7 @@
   height: 2px;
   bottom: 0;
   left: 0;
-
   background-color: rgb(255, 255, 255);
-
   transform-origin: bottom right;
   transition: transform 0.3s ease-out;
 }
@@ -40,7 +38,7 @@
   font-weight: bolder;
 }
 
-.bannerParentDiv .bannerChildDiv .menuBar .otherQuickOptions span {
+.bannerParentDiv .bannerChildDiv .menuBar .otherQuickOptions .optionBar span {
   margin: 2px;
   padding-bottom: 2px;
   font-size: 14px;
@@ -55,25 +53,27 @@
   width: 100vw;
 }
 
-.otherQuickOptions span {
+.otherQuickOptions .optionBar span {
   cursor: pointer;
 }
-.otherQuickOptions {
+.otherQuickOptions .optionBar {
   display: flex;
   justify-content: space-around;
   width: 60%;
   margin: auto;
 }
-
+.otherQuickOptions .dropdown {
+  display: none;
+}
 /* --------------------MEDIA QUERIES-------------------- */
 @media screen and (max-width: 1400px) {
-  .otherQuickOptions {
+  .otherQuickOptions .optionBar {
     justify-content: space-between;
     width: 80%;
   }
 }
 @media screen and (max-width: 870px) {
-  .otherQuickOptions {
+  .otherQuickOptions .optionBar {
     justify-content: space-between;
     width: 100%;
   }
@@ -87,7 +87,27 @@
   }
 }
 @media screen and (max-width: 660px) {
-  .menuBar {
+  .menuBar .otherQuickOptions .optionBar {
     display: none;
+  }
+  .menuBar .otherQuickOptions .dropdown {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 8px 0;
+  }
+  .menuBar .otherQuickOptions .dropdown .categDropdown {
+    background-color: transparent;
+    border: none;
+    color: white;
+    outline: none;
+    width: min-content;
+    /* border-bottom: 1px solid white; */
+    cursor: pointer;
+  }
+}
+@media screen and (max-width: 600px) {
+  .bannerParentDiv .bannerChildDiv .menuBar {
+    top: 62px;
   }
 }

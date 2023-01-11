@@ -11,7 +11,7 @@ const CreatePage = () => {
       {user ? (
         <Create />
       ) : (
-        <>          
+        <>
           {alert("You must login first")} <Login />
         </>
       )}
