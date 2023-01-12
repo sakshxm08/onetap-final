@@ -26,7 +26,7 @@ according to their time and price. They will be shown all avaialble places which
 
 ## Deplyoment of OneTap
 
-<a href="onetap-sakshxm08.netlify.app">OneTap</a>
+<a href="https://onetap-sakshxm08.netlify.app">OneTap</a>
 
 
 ## Features to  be added 
