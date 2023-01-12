@@ -26,10 +26,7 @@ according to their time and price. They will be shown all avaialble places which
 
 ## Deplyoment of OneTap
 
-OneTap has been deployed on 2 major platforms :<br/>
-<ul><li><a href="https://onetap-for-replit.nikhilaks.repl.co/">OneTap Replit</a></li>
-</br>
-<li><a href="https://onetap1234.netlify.app/">OneTap Netlify</a></li></ul>
+<a href="onetap-sakshxm08.netlify.app">OneTap</a>
 
 
 ## Features to  be added 
