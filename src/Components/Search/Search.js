@@ -3,9 +3,11 @@ import { AllPostContext } from "..//../contextStore/AllPostContext";
 import { PostContext } from "../../contextStore/PostContext";
 import SearchIcon from "@mui/icons-material/Search";
 
-import CloseIcon from "..//../assets/CloseIcon/CloseIcon";
+// import CloseIcon from "..//../assets/CloseIcon/CloseIcon";
 import { useNavigate } from "react-router-dom";
 import InputHints from "react-input-hints";
+// import ArrowDropUpOutlinedIcon from "@mui/icons-material/ArrowDropUpOutlined";
+import ClearOutlinedIcon from "@mui/icons-material/ClearOutlined";
 
 import "./search.css";
 function Search() {
@@ -69,17 +71,19 @@ function Search() {
           ]}
         />
 
-        <div className="searchIcon">
-          <div onClick={handleSearchClick}>
-            {" "}
-            <SearchIcon />{" "}
-          </div>
-          {filteredData.length !== 0 && (
-            <div id="clearBtn" onClick={clearInput}>
-              <CloseIcon />
+        {filteredData.length === 0 ? (
+          <div className="searchIcon">
+            <div onClick={handleSearchClick}>
+              {" "}
+              <SearchIcon fontSize="large" />{" "}
             </div>
-          )}
-        </div>
+          </div>
+        ) : (
+          <div id="clearBtn" onClick={clearInput}>
+            {" "}
+            <ClearOutlinedIcon fontSize="large" />
+          </div>
+        )}
       </div>
       {filteredData.length !== 0 && (
         <div className="dataResult">

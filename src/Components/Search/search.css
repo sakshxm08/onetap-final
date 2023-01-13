@@ -19,7 +19,7 @@
     width: 250px;
     display: flex; */
 
-  width: 30em;
+  width: 28em;
   height: 42px;
   border: none;
   background: none;
@@ -28,19 +28,20 @@
   font-family: "Roboto", sans-serif;
 }
 
-.search .searchIcon {
+.searchIcon,
+#clearBtn {
   margin: auto 10px;
   /* padding-right: 8px; */
   /* background-color: #ebeeef;
   display: flex; */
   place-items: center;
-  color: black;
 }
 
 input:focus {
   outline: none;
 }
-.searchIcon svg {
+.searchIcon svg,
+#clearBtn svg {
   font-size: 25px;
 }
 
@@ -48,7 +49,7 @@ input:focus {
   position: absolute;
   top: 40px;
   padding: 0;
-  width: 33.33em;
+  width: 493px;
   max-height: 208px;
   border: none;
   background-color: white;
@@ -96,19 +97,31 @@ input:focus {
   .search input {
     width: 25em;
   }
+  .dataResult {
+    width: 445px;
+  }
 }
 @media screen and (max-width: 1220px) {
   .search input {
     width: 20em;
+  }
+  .dataResult {
+    width: 365px;
   }
 }
 @media screen and (max-width: 1080px) {
   .search input {
     width: 15em;
   }
+  .dataResult {
+    width: 285px;
+  }
 }
-@media screen and (max-width: 970px) {
-  .search input {
-    width: 12em;
+@media screen and (max-width: 1080px) {
+  .dataResult {
+    width: 90%;
+    left: 5%;
+    max-height: 350px;
+    height: 350px;
   }
 }

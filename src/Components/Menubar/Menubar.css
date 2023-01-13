@@ -1,0 +1,127 @@
+body {
+  overflow-x: hidden;
+}
+.menubarParentDiv {
+  color: rgb(210, 210, 210);
+  display: none;
+}
+.menubarParentDiv .menubarIcon svg {
+  margin: 10px;
+  cursor: pointer;
+}
+.menubarMainDiv {
+  display: none;
+  position: absolute;
+  background-color: rgb(27, 27, 27);
+  margin-left: -10px;
+  border-radius: 0 0 0 12px;
+  width: 100vw;
+  /* right: -100vw; */
+  right: 0;
+  top: 76px;
+  /* transform: translateX(500px); */
+  /* transition: all 0.5s linear; */
+}
+.bottom {
+  box-shadow: 0px 20px 15px -15px #111;
+}
+.closeicon {
+  display: none;
+}
+.showMenubar {
+  display: block;
+  /* transform: translateX(-100vw); */
+}
+.hideIcon {
+  display: none;
+}
+.showIcon {
+  display: inline;
+}
+/* -----------------USER DETAILS---------------- */
+.menubarParentDiv .user {
+  padding: 20px;
+  padding-top: 10px;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  border-bottom: 1px solid rgb(165, 165, 165);
+}
+.menubarParentDiv .user .userPhoto .userImg {
+  height: 80px;
+  width: auto;
+  border-radius: 100px;
+  border: none;
+  outline: none;
+}
+.menubarParentDiv .user .userDetails {
+  display: flex;
+  flex-direction: column;
+  margin-left: 20px;
+}
+.menubarParentDiv .user .userDetails span #greeting {
+  font-size: 14px;
+}
+.menubarParentDiv .user .userDetails .username {
+  font-size: 24px;
+  margin: 5px 0;
+  font-weight: 600;
+}
+.menubarParentDiv .user .userDetails a {
+  font-size: 14px;
+  color: white;
+}
+/* ------------------------OPTIONS-------------------- */
+.menubarParentDiv .options {
+  padding: 20px;
+  border-bottom: 1px solid rgb(165, 165, 165);
+}
+.menubarParentDiv .options .option {
+  display: flex;
+  margin-bottom: 15px;
+  align-items: center;
+}
+.menubarParentDiv .options .option:last-child {
+  margin-bottom: 0;
+}
+.menubarParentDiv .options .option .optionName {
+  font-size: 16px;
+  cursor: pointer;
+  margin-left: 20px;
+  transition: 0.3s;
+}
+.menubarParentDiv .options .option .optionName:hover {
+  color: white;
+  text-decoration: underline;
+}
+.menubarParentDiv .options:last-child {
+  border: none;
+}
+.menubarButtons a {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.buttonMenubar {
+  width: 90%;
+  margin: 20px auto;
+  background-color: #0f5965;
+  color: whitesmoke;
+  border: none;
+  outline: none;
+  text-decoration: none;
+  border-radius: 8px;
+  font-size: 18px;
+  height: 40px;
+  transition: background-color 0.18s ease-in-out, color 0.18s ease-in-out;
+}
+.buttonMenubar:hover {
+  background-color: rgb(255, 255, 255);
+  color: #0f5965;
+  border: none;
+}
+@media screen and (max-width: 970px) {
+  .menubarParentDiv {
+    display: inline;
+  }
+}
