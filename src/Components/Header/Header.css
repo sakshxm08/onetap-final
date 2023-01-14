@@ -7,6 +7,7 @@
   background-color: #000;
   position: sticky;
   width: 100vw;
+  max-width: 100%;
   z-index: 999;
   top: 0;
 }
@@ -66,6 +67,7 @@
   height: 42px;
   background-color: #343434;
   border-radius: 8px;
+  margin-left: 8px;
   /* border: 0.5px #454545 solid; */
 }
 
@@ -75,7 +77,7 @@
   position: absolute;
   top: 40px;
   padding: 0;
-  width: inherit;
+  width: 100%;
   max-height: 208px;
   border: none;
   background-color: white;
@@ -360,7 +362,6 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    width: 80px;
   }
 }
 @media screen and (max-width: 870px) {
@@ -427,6 +428,7 @@
   }
   .searchBar {
     width: 100vw;
+    max-width: 100%;
 
     padding: 5px 0 25px;
     background-color: black;

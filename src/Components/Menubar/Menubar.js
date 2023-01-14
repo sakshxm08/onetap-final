@@ -143,16 +143,11 @@ const Menubar = () => {
                 </div>
               </div>
               <div className="options">
-                <div className="option">
+                <div className="option" onClick={logoutHandler}>
                   <div className="optionIcon">
                     <LogoutIcon />
                   </div>
-                  <div
-                    className="optionName logoutOption"
-                    onClick={logoutHandler}
-                  >
-                    Logout
-                  </div>
+                  <div className="optionName logoutOption">Logout</div>
                 </div>
               </div>
             </div>
@@ -194,7 +189,7 @@ const Menubar = () => {
               </div>
               <div className="menubarButtons">
                 <Link to="/login">
-                  <button className="buttonMenubar">Login</button>
+                  <button className="buttonMenubar">Login/Register</button>
                 </Link>
               </div>
             </div>

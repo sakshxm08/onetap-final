@@ -2,6 +2,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Quicksand&display=swap");
 .footerParentDiv {
   width: 100vw;
+  max-width: 100%;
 }
 .footerParentDiv .content {
   display: flex;

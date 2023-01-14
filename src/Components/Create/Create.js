@@ -4,10 +4,13 @@ import { Link } from "react-router-dom";
 import { Firebase } from "../../firebase/config";
 import { AuthContext } from "../../contextStore/AuthContext";
 import { useNavigate } from "react-router-dom";
-import GoLoading from "../Loading/GoLoading";
+// import GoLoading from "../Loading/GoLoading";
+
 import noImg from "../../assets/no-image.png";
 import Logo from "../../onetap_logo.png";
 import Header from "../Header/Header";
+// import { SpinnerDiamond } from "spinners-react";
+import { PropagateLoader } from "react-spinners";
 
 const Create = () => {
   const { user } = useContext(AuthContext);
@@ -51,7 +54,6 @@ const Create = () => {
   return (
     <Fragment>
       <Header />
-      {loading && <GoLoading />}
       <div className="createMainDiv">
         <div className="createParentDiv">
           <Link to="/">
@@ -159,9 +161,17 @@ const Create = () => {
               }}
               className="fileInp"
             />
-            <button className="uploadBtn" onClick={handleSubmit}>
-              Upload and Submit
-            </button>
+
+            {loading ? (
+              <div className="spinnercreate">
+                <PropagateLoader color="#004e92" />
+              </div>
+            ) : (
+              <button className="uploadBtn" onClick={handleSubmit}>
+                Upload and Submit
+              </button>
+            )}
+
             <div className="cancelUploadDiv">
               <Link to="/" className="cancelUploadLink">
                 Cancel the upload

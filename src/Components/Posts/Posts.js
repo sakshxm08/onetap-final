@@ -3,9 +3,9 @@ import { Link } from "react-router-dom";
 
 import "./Post.css";
 import { Firebase } from "../../firebase/config";
-import BarLoading from "../Loading/BarLoading";
+// import BarLoading from "../Loading/BarLoading";
 import PostCards from "../PostCards/PostCards";
-
+import { SpinnerInfinity } from "spinners-react";
 import { AllPostContext } from "../../contextStore/AllPostContext";
 
 function Posts() {
@@ -90,7 +90,13 @@ function Posts() {
           </div>
           <div className="cards" id="cards">
             {" "}
-            {loading ? <BarLoading /> : quickMenuCards}
+            {loading ? (
+              <div className="spinnerinf">
+                <SpinnerInfinity size="100px" color="#52c6d9" />
+              </div>
+            ) : (
+              quickMenuCards
+            )}
           </div>
         </div>
       )}
@@ -100,9 +106,16 @@ function Posts() {
           <span>Top-Picks</span>
           <div className="hrBar"></div>
         </div>
-        <div className="fresh-recomendation-cards" id="recommendations">
-          {loading2 ? <BarLoading /> : freshRecomendationCards}
-        </div>
+
+        {loading2 ? (
+          <div className="spinnerinf">
+            <SpinnerInfinity size="100px" color="#52c6d9" />
+          </div>
+        ) : (
+          <div className="fresh-recomendation-cards" id="recommendations">
+            {freshRecomendationCards}
+          </div>
+        )}
       </div>
     </div>
   );

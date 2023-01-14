@@ -15,7 +15,8 @@ body {
   background-color: rgb(27, 27, 27);
   margin-left: -10px;
   border-radius: 0 0 0 12px;
-  width: 100vw;
+  width: 500px;
+  max-width: 100%;
   /* right: -100vw; */
   right: 0;
   top: 76px;
@@ -45,7 +46,7 @@ body {
   display: flex;
   justify-content: flex-start;
   align-items: center;
-  border-bottom: 1px solid rgb(165, 165, 165);
+  border-bottom: 1px solid rgb(76, 76, 76);
 }
 .menubarParentDiv .user .userPhoto .userImg {
   height: 80px;
@@ -73,26 +74,26 @@ body {
 }
 /* ------------------------OPTIONS-------------------- */
 .menubarParentDiv .options {
-  padding: 20px;
-  border-bottom: 1px solid rgb(165, 165, 165);
+  border-bottom: 1px solid rgb(76, 76, 76);
 }
 .menubarParentDiv .options .option {
   display: flex;
-  margin-bottom: 15px;
   align-items: center;
+  padding: 15px 20px 15px;
 }
 .menubarParentDiv .options .option:last-child {
   margin-bottom: 0;
 }
 .menubarParentDiv .options .option .optionName {
   font-size: 16px;
-  cursor: pointer;
   margin-left: 20px;
   transition: 0.3s;
 }
-.menubarParentDiv .options .option .optionName:hover {
-  color: white;
-  text-decoration: underline;
+.menubarParentDiv .options .option:hover {
+  /* color: white; */
+  cursor: pointer;
+  background-color: #4b4b4b;
+  /* text-decoration: underline; */
 }
 .menubarParentDiv .options:last-child {
   border: none;
@@ -123,5 +124,17 @@ body {
 @media screen and (max-width: 970px) {
   .menubarParentDiv {
     display: inline;
+  }
+}
+@media screen and (max-width: 370px) {
+  .menubarParentDiv .user .userDetails .username {
+    font-size: 20px;
+  }
+  .menubarParentDiv .user .userDetails span {
+    font-size: 12px;
+  }
+  .menubarParentDiv .user .userPhoto .userImg {
+    height: 60px;
+    width: auto;
   }
 }

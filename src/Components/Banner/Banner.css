@@ -48,9 +48,11 @@
   position: relative;
   margin-top: 8px;
   width: 100vw;
+  max-width: 100%;
 }
 .bannerChildDiv .banner img {
   width: 100vw;
+  max-width: 100%;
 }
 
 .otherQuickOptions .optionBar span {
@@ -108,6 +110,6 @@
 }
 @media screen and (max-width: 600px) {
   .bannerParentDiv .bannerChildDiv .menuBar {
-    top: 62px;
+    top: 87px;
   }
 }

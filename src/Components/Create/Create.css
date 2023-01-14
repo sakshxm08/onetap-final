@@ -54,7 +54,7 @@
   color: whitesmoke;
   text-decoration: none;
   border-radius: 28px;
-  margin-top: 50px;
+  margin-top: 25px;
   font-size: 18px;
   height: 40px;
   transition: background-color 0.18s ease-in-out, color 0.18s ease-in-out;
@@ -127,6 +127,13 @@
 }
 .createParentDiv .centerDiv .topLogo {
   display: none;
+}
+.spinnercreate {
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  margin-top: 25px;
+  height: 40px;
 }
 @media screen and (max-width: 1000px) {
   .createParentDiv {

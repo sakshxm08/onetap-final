@@ -1,10 +1,11 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import { useNavigate } from "react-router-dom";
+import { SpinnerRoundOutlined } from "spinners-react";
 import { Firebase } from "../../firebase/config";
 // import { getAuth, signInWithPopup, GoogleAuthProvider } from "firebase/auth";
 import Logo from "../../onetap_logo.png";
-import RoundLoading from "../Loading/RoundLoading";
+// import RoundLoading from "../Loading/RoundLoading";
 import "./Login.css";
 
 function Login() {
@@ -22,6 +23,7 @@ function Login() {
       })
       .catch((error) => {
         alert(error.message);
+        setLoading(false);
       });
   };
   // -------------------GOOGLE LOGIN----------------------- //
@@ -57,7 +59,11 @@ function Login() {
   // };
   return (
     <>
-      {loading && <RoundLoading />}
+      {loading && (
+        <div className="spinnerlogin">
+          <SpinnerRoundOutlined color="#52c6d9" size="100px" />
+        </div>
+      )}
       <div className="loginMainDiv">
         <div className="loginParentDiv">
           <Link to="/">

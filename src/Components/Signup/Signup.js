@@ -5,7 +5,8 @@ import Logo from "../../onetap_logo.png";
 import "./Signup.css";
 import { Firebase } from "../../firebase/config";
 import { useNavigate } from "react-router-dom";
-import SignUpLoading from "../Loading/SignUpLoading";
+// import SignUpLoading from "../Loading/SignUpLoading";
+import { SpinnerDotted } from "spinners-react";
 
 export default function Signup() {
   const navigate = useNavigate();
@@ -33,12 +34,16 @@ export default function Signup() {
       })
       .catch((error) => {
         alert(error.message);
-        window.location.reload();
+        setLoading(false);
       });
   };
   return (
     <>
-      {loading && <SignUpLoading />}{" "}
+      {loading && (
+        <div className="spinnersignup">
+          <SpinnerDotted color="#52c6d9" size="100px" />
+        </div>
+      )}{" "}
       <div className="signupMainDiv">
         <div className="signupParentDiv">
           <Link to="/">
